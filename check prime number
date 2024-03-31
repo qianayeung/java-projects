@@ -12,12 +12,21 @@ class Main {
 
         // run loop from 2 to number - 1
         // check if number is divisible by number between 2 to number - 1
+        
+        // int i = 2;: This line initialises a variable i with a value of 2. This variable will be used to iterate through numbers from 2 to number - 1.
         int i = 2;
+
+        // while (i < number) {: This line starts a while loop that continues as long as the value of i is less than the input number (number).
         while (i < number) {
+
+            // if (number % i == 0) {: Inside the while loop, this if statement checks if the input number (number) is divisible by the current value of i. 
+            // If the remainder of dividing number by i is zero, it means that number is divisible by i, indicating that number is not a prime number.
             if (number % i == 0)  {
                 flag = 1;
                 break;
             }
+
+            // i++;: At the end of each iteration of the while loop, the value of i is incremented by 1, so that the next number is checked for divisibility.
             i++;
         }
 
@@ -28,6 +37,51 @@ class Main {
             System.out.println("Prime Number");
         }
 
+        input.close();
+    }
+}
+
+
+
+
+
+// solution 2:
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        // get input value for number
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        boolean isPrime = true;
+
+        // create a flag variable with value 0
+        int flag = 0;
+
+        // run loop from 2 to number - 1
+        // check if number is divisible by number between 2 to number - 1
+         for (int i = 2; i * i <= number; i++) {
+            if (number % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        // Check if the number is prime
+        if (number <= 1) {
+            isPrime = false;
+        }
+
+        // check if flag is 1 and print either Not a Prime Number or Prime Number
+        if (isPrime) {
+            System.out.println("Prime Number");
+        } else {
+            System.out.println("Not a Prime Number");
+        }
+
+        
+        
         input.close();
     }
 }
