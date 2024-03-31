@@ -1,0 +1,57 @@
+// Problem Description
+Create a program to find the sum of all the user inputs until the user enters 0.
+
+Create an integer variable named sum with initial value 0.
+Run a while loop that is always true.
+Inside the loop, get an integer input value from the user and store it in a variable.
+Check if the value is 0.
+If the input value is 0, terminate the loop. Otherwise, add the input value to the sum variable.
+Print the sum.
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int number;
+        int sum = 0;
+
+        // run a while loop that breaks only if input value is 0
+        // take input value for number inside the loop
+        // if input value is other than 0, add the value to sum
+        while (int sum = 0, i = 0) {
+            int number = input.nextInt();
+            if (number =! 0) {
+                sum = number++;
+            }
+
+        }
+
+// Debugged:
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int number;
+        int sum = 0;
+
+        // run a while loop that breaks only if input value is 0
+        // take input value for number inside the loop
+        // if input value is other than 0, add the value to sum
+        while (int sum = 0, i = 0) {
+            int number = input.nextInt();
+            if (number =! 0) {
+                sum = number++;
+            }
+
+        }
+
+        
+        // print the sum
+        System.out.println(sum);
+        
+        input.close();
+    }
+}
