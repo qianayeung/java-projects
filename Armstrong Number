@@ -22,6 +22,13 @@ class Main {
             // use originalNumber % 10 to get the last digit
             remainder = originalNumber % 10;
             // add the cube of the last digit to sum
+
+            // Extract the last digit (remainder): 153 % 10 = 3
+            // Calculate the cube of the last digit:
+
+            // 3 * 3 * 3 = 27
+            // sum += 27
+            // 27 + 125 + 1 = 153
             sum += remainder * remainder * remainder;
 
             // use originalNumber / 10 to change the value of originalNumber
@@ -39,3 +46,5 @@ class Main {
         input.close();
     }
 }
+
+
